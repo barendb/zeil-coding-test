@@ -1,6 +1,6 @@
 @Api_HostAddress = http://localhost:5289
 
-GET {{Api_HostAddress}}/weatherforecast/
+POST {{Api_HostAddress}}/v1/cardvalidation/
 Accept: application/json
 
 ###
