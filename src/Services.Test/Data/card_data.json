@@ -1,0 +1,152 @@
+[
+  {
+    "cardType": "Visa",
+    "cardNumber": "4111 1111 1111 1111",
+    "valid": true
+  },
+  {
+    "cardType": "Visa",
+    "cardNumber": "4242 4242 4242 4242",
+    "valid": true
+  },
+  {
+    "cardType": "Visa",
+    "cardNumber": "4999 9999 9999 9103",
+    "valid": true
+  },
+  {
+    "cardType": "Visa",
+    "cardNumber": "4111 1111 1111 1119",
+    "valid": false
+  },
+  {
+    "cardType": "Visa",
+    "cardNumber": "4999 9999 9999 9108",
+    "valid": false
+  },
+  {
+    "cardType": "Visa",
+    "cardNumber": "4999 9999 9999 9109",
+    "valid": false
+  },
+  {
+    "cardType": "MasterCard",
+    "cardNumber": "5431 1111 1111 1111",
+    "valid": true
+  },
+  {
+    "cardType": "MasterCard",
+    "cardNumber": "5123 4558 0630 8521",
+    "valid": true
+  },
+  {
+    "cardType": "MasterCard",
+    "cardNumber": "5123 4590 4605 8920",
+    "valid": true
+  },
+  {
+    "cardType": "MasterCard",
+    "cardNumber": "5427 6600 6424 1339",
+    "valid": true
+  },
+  {
+    "cardType": "MasterCard",
+    "cardNumber": "2223 0000 1000 0005",
+    "valid": true
+  },
+  {
+    "cardType": "MasterCard",
+    "cardNumber": "5999 9999 9999 9108",
+    "valid": false
+  },
+  {
+    "cardType": "Amex",
+    "cardNumber": "3774 0011 1111 115",
+    "valid": true
+  },
+  {
+    "cardType": "Amex",
+    "cardNumber": "3760 0000 0000 006",
+    "valid": true
+  },
+  {
+    "cardType": "Amex",
+    "cardNumber": "3711 1111 1111 114",
+    "valid": true
+  },
+  {
+    "cardType": "Amex",
+    "cardNumber": "3712 3480 6987 034",
+    "valid": true
+  },
+  {
+    "cardType": "Diners",
+    "cardNumber": "3600 0000 0000 08",
+    "valid": true
+  },
+  {
+    "cardType": "Diners",
+    "cardNumber": "3612 3404 8703 94",
+    "valid": true
+  },
+  {
+    "cardType": "Diners",
+    "cardNumber": "3612 3409 8536 19",
+    "valid": true
+  },
+  {
+    "cardType": "Diners",
+    "cardNumber": "3612 3442 2696 33",
+    "valid": true
+  },
+  {
+    "cardType": "Discover",
+    "cardNumber": "6011 1111 1111 1117",
+    "valid": true
+  },
+  {
+    "cardType": "Discover",
+    "cardNumber": "6601 1111 1111 1113",
+    "valid": true
+  },
+  {
+    "cardType": "Discover",
+    "cardNumber": "6011 3099 0000 1248",
+    "valid": true
+  },
+  {
+    "cardType": "JCB",
+    "cardNumber": "3562 3500 0000 0003",
+    "valid": true
+  },
+  {
+    "cardType": "ASB True Rewards",
+    "cardNumber": "5000 5111 1111 1113",
+    "valid": true
+  },
+  {
+    "cardType": "Jetstar Test Cards",
+    "cardNumber": "5328 6500 0000 0006",
+    "valid": true
+  },
+  {
+    "cardType": "Jetstar Test Cards",
+    "cardNumber": "5210 0000 1000 1001",
+    "valid": true
+  },
+  {
+    "cardType": "Switch",
+    "cardNumber": "4903 1111 1111 1113",
+    "valid": true
+  },
+  {
+    "cardType": "Visa Electron",
+    "cardNumber": "4026 1111 1111 1115",
+    "valid": true
+  },
+  {
+    "cardType": "Warehouse Money Visa Card",
+    "cardNumber": "4065 9301 0900 0002",
+    "valid": true
+  }
+]
