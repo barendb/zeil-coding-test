@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "09b274bd-f2b2-4391-bd7d-054c861cb16c",
+		"name": "Zeil-Coding-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1908441"
+	},
+	"item": [
+		{
+			"name": "POST - Valid card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cardNumber\": \"4111 1111 1111 1111\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/v1/cardvalidation",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"v1",
+						"cardvalidation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - In valid card",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test('Status code is 200', function() {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"pm.test('isValid to be true', function() {",
+							"    pm.expect(jsonData.isValid).to.eq(false);",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cardNumber\": \"4111 1111 1111 1112\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/v1/cardvalidation",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"v1",
+						"cardvalidation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Bad request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"",
+							"pm.test('Status code is 400', function() {",
+							"    pm.response.to.have.status(200);",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cardNumber\": \"4111x1111x1111x1112\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/v1/cardvalidation",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"v1",
+						"cardvalidation"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiUrl",
+			"value": "http://localhost:5289",
+			"type": "string"
+		}
+	]
+}
