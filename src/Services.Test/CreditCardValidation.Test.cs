@@ -1,22 +1,18 @@
-﻿using Services.Test.Data;
+﻿using Services.Helpers;
+using Services.Test.Data;
 
 namespace Services.Test;
 
 public class CreditCardValidationTest
 {
-    public static TheoryData<Card> Cards
-    {
-        get { return TestData.Cards; }
-    }
-    
+    public static TheoryData<Card> Cards => TestData.Cards;
+
     [Theory]
     [MemberData(nameof(Cards))]
     public void IsValidLuhn_ShouldReturnTrueForValidLuhnNumbers(Card card)
     {
         // arrange - digits only
-        var cardNumber = new string(card.CardNumber.ToCharArray()
-            .Where(char.IsDigit)
-            .ToArray());
+        var cardNumber = StringHelpers.DigitsOnly(card.CardNumber);
         
         // act
         var result = CreditCardValidation.IsValidLuhn(cardNumber);

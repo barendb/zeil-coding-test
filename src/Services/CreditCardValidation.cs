@@ -2,7 +2,7 @@
 
 namespace Services;
 
-public static class CreditCardValidation
+public static partial class CreditCardValidation
 {
     // Convert to int.
     private static readonly Func<char, int> CharToInt = c => c - '0';
@@ -10,6 +10,10 @@ public static class CreditCardValidation
     private static readonly Func<int, bool> IsEven = i => i % 2 == 0;
     
     private static readonly Func<int, int> DoubleDigit = i => (i * 2).ToString().ToCharArray().Select(CharToInt).Sum();
+    
+    
+    [GeneratedRegex(@"^\d+$")]
+    private static partial Regex NumbersOnlyRegex();
     
     /// <summary>
     /// Checks that the card number passed in, passes luhn validation
@@ -19,7 +23,7 @@ public static class CreditCardValidation
     /// <exception cref="ArgumentException">expect creditCardNumber to only contain digits</exception>
     public static bool IsValidLuhn(string creditCardNumber)
     {
-        if (!Regex.IsMatch(creditCardNumber, @"^\d+$"))
+        if (!NumbersOnlyRegex().IsMatch(creditCardNumber))
         {
             throw new ArgumentException("creditCardNumber should only contain digits: ^\\d+$");
         }
