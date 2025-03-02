@@ -1,0 +1,18 @@
+using Api.Filters;
+
+namespace Api.V1.Tests;
+
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("v1/tests")]
+public class TestsController : ControllerBase
+{
+    [HttpGet]
+    [TypeFilter<DevelopmentOnlyAttribute>]
+    public IActionResult Get()
+    {
+        throw new Exception("This is a test exception - expect 500 http response");
+    }
+}
+
