@@ -5,8 +5,8 @@ namespace Api.V1.Tests;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("v1/tests")]
-public class TestsController : ControllerBase
+[Route("v1/tests/exception")]
+public class ExceptionTestController : ControllerBase
 {
     [HttpGet]
     [TypeFilter<DevelopmentOnlyAttribute>]
